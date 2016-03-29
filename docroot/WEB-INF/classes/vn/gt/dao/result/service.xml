@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="vn.gt.dao.result">
+	<author>win_64</author>
+	<namespace>gt</namespace>
+
+
+	<entity name="ResultCompetion" table="RESULT_COMPLETION" local-service="true" data-source="gtDataSource" remote-service="true" cache-enabled="false">
+
+		<!-- PK fields -->
+		<column name="id" db-name="id" type="long" primary="true" />
+		<column name="requestCode" db-name="RequestCode" type="String" />
+		<column name="requestState" db-name="RequestState" type="int" />
+		<column name="documentName" db-name="DocumentName" type="long" />
+		<column name="documentYear" db-name="DocumentYear" type="int" />
+		<column name="nameOfShip" db-name="NameOfShip" type="String" />
+		<column name="flagStateOfShip" db-name="FlagStateOfShip" type="String" />
+		<column name="nameOfMaster" db-name="NameOfMaster" type="String" />
+		<column name="grossTonnage" db-name="GrossTonnage" type="double" />
+		<column name="portOfArrivalCode" db-name="PortOfArrivalCode" type="String" />
+		<column name="maritimeCode" db-name="MaritimeCode" type="String" />
+		<column name="division" db-name="Division" type="String" />
+		<column name="approvalName" db-name="ApprovalName" type="String" />
+		<column name="approvalTime" db-name="ApprovalTime" type="Date" />
+		<column name="certificateNo" db-name="CertificateNo" type="String" />
+		<column name="responseStatusHQ" db-name="ResponseStatusHQ" type="int" />
+		<column name="responseStatusBP" db-name="ResponseStatusBP" type="int" />
+		<column name="responseStatusYT" db-name="ResponseStatusYT" type="int" />
+		<column name="responseStatusDV" db-name="ResponseStatusDV" type="int" />
+		<column name="responseStatusTV" db-name="ResponseStatusTV" type="int" />
+		<column name="responseStatusCVHH" db-name="ResponseStatusCVHH" type="int" />
+		<column name="responseTimeHQ" db-name="ResponseTimeHQ" type="Date" />
+		<column name="responseTimeBP" db-name="ResponseTimeBP" type="Date" />
+		<column name="responseTimeYT" db-name="ResponseTimeYT" type="Date" />
+		<column name="responseTimeDV" db-name="ResponseTimeDV" type="Date" />
+		<column name="responseTimeTV" db-name="ResponseTimeTV" type="Date" />
+		<column name="responseTimeCVHH" db-name="ResponseTimeCVHH" type="Date" />
+		<column name="responseHQ" db-name="ResponseHQ" type="String" />
+		<column name="responseBP" db-name="ResponseBP" type="String" />
+		<column name="responseYT" db-name="ResponseYT" type="String" />
+		<column name="responseDV" db-name="ResponseDV" type="String" />
+		<column name="responseTV" db-name="ResponseTV" type="String" />
+		<column name="responseCVHH" db-name="ResponseCVHH" type="String" />
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="id" />
+		</order>
+
+		<finder name="RequestCode" return-type="ResultCompetion">
+			<finder-column name="requestCode" />
+		</finder>
+		<finder name="DocumentNameAndDocumentYear" return-type="Collection">
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+		</finder>
+
+	</entity>
+	<entity name="ResultDeclaration" table="RESULT_DECLARATION" local-service="true" remote-service="true" data-source="gtDataSource" cache-enabled="false">
+
+		<!-- PK fields -->
+		<column name="id" db-name="id" type="long" primary="true" />
+		<column name="requestCode" db-name="RequestCode" type="String" />
+		<column name="requestState" db-name="RequestState" type="int" />
+		<column name="documentName" db-name="DocumentName" type="long" />
+		<column name="documentYear" db-name="DocumentYear" type="int" />
+		<column name="businessOrder" db-name="BusinessOrder" type="int" />
+		<column name="businessTypeCode" db-name="BusinessTypeCode" type="int" />
+		<column name="latestSend" db-name="LatestSend" type="int" />
+		<column name="declarationTime" db-name="DeclarationTime" type="Date" />
+		<column name="arrivalDepartureTime" db-name="ArrivalDepartureTime" type="Date" />
+		<column name="remainingTime" db-name="RemainingTime" type="String" />
+		<column name="remarks" db-name="Remarks" type="String" />
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="id" />
+		</order>
+
+		<finder name="RequestCode" return-type="ResultDeclaration">
+			<finder-column name="requestCode" />
+		</finder>
+
+		<finder name="BusinessTypeCode" return-type="Collection">
+			<finder-column name="businessTypeCode" />
+		</finder>
+
+
+		<finder name="DocumentNameAndBusinessTypeCodeAndDocumentYear" return-type="Collection">
+			<finder-column name="businessTypeCode" />
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+		</finder>
+		
+		<!-- dung.le them -->
+		<finder name="DocumentNameAndBusinessTypeCodeAndDocumentYearRequestCode" return-type="Collection">
+			<finder-column name="businessTypeCode" />
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+			<finder-column name="requestCode" />
+		</finder>
+		
+		<finder name="fndDocumentNameAndBusinessTypeCodeAndDocumentYearRequestCode" return-type="ResultDeclaration">
+			<finder-column name="businessTypeCode" />
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+			<finder-column name="requestCode" />
+		</finder>
+		
+		<finder name="DocumentNameAndDocumentYear" return-type="Collection">
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+		</finder>
+
+		<finder name="RequestCodeAndBusinessTypeCode" return-type="Collection">
+			<finder-column name="requestCode" />
+			<finder-column name="businessTypeCode" />
+		</finder>
+	</entity>
+
+	<entity name="ResultCertificate" table="result_certificate" local-service="true" remote-service="true" data-source="gtDataSource" cache-enabled="false">
+		<column name="id" db-name="ID" type="long" primary="true" />
+
+		<column name="documentName" db-name="DocumentName" type="long" />
+		<column name="documentYear" db-name="DocumentYear" type="int" />
+		<column name="maritimeCode" db-name="MaritimeCode" type="String" />
+		<column name="certificateCode" db-name="CertificateCode" type="String" />
+		<column name="certificateOrder" db-name="CertificateOrder" type="int" />
+		<column name="certificateNo" db-name="CertificateNo" type="String" />
+		<column name="certificateIssueDate" db-name="CertificateIssueDate" type="Date" />
+		<column name="certificateExpiredDate" db-name="CertificateExpiredDate" type="Date" />
+		<column name="examinationDate" db-name="ExaminationDate" type="Date" />
+		<column name="approvalName" db-name="ApprovalName" type="String" />
+		<column name="isExamined" db-name="IsExamined" type="int" />
+		<column name="mandatory" db-name="mandatory" type="int" />
+
+		<order by="desc">
+			<order-column name="id" />
+		</order>
+
+		<finder name="DocumentNameAnddocumentYear" return-type="Collection">
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+		</finder>
+		<finder name="DocumentNameAnddocumentYearAndMaritimeCode" return-type="Collection">
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+			<finder-column name="maritimeCode" />
+		</finder>
+		<finder name="DocumentNameAnddocumentYearAndCertificateCode" return-type="Collection">
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+			<finder-column name="certificateCode" />
+		</finder>
+	</entity>
+
+	<entity name="ResultNotification" table="result_notification" local-service="true" remote-service="true" data-source="gtDataSource" cache-enabled="false">
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="requestCode" db-name="RequestCode" type="String" />
+		<column name="requestState" db-name="RequestState" type="int" />
+
+		<column name="documentName" db-name="DocumentName" type="long" />
+		<column name="documentYear" db-name="DocumentYear" type="int" />
+		<column name="maritimeCode" db-name="MaritimeCode" type="String" />
+		<column name="role" db-name="Role" type="long" />
+		<column name="response" db-name="Response" type="String" />
+		<column name="organization" db-name="Organization" type="String" />
+		<column name="division" db-name="Division" type="String" />
+		<column name="officerName" db-name="OfficerName" type="String" />
+		<column name="latestDate" db-name="LatestDate" type="String" />
+		<column name="businessTypeCode" db-name="BusinessTypeCode" type="int" />
+		<column name="remarks" db-name="Remarks" type="String" />
+		<column name="isReply" db-name="IsReply" type="int" />
+
+		<column name="responseTime" db-name="ResponseTime" type="Date" />
+
+		<order by="desc">
+			<order-column name="id" />
+		</order>
+
+		<finder name="BusinessTypeCode" return-type="Collection">
+			<finder-column name="businessTypeCode" />
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+		</finder>
+
+		<finder name="DocumentNameAnddocumentYear" return-type="Collection">
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+		</finder>
+
+	</entity>
+
+
+
+	<entity name="ResultMinistry" table="RESULT_MINISTRY" local-service="true" remote-service="true" data-source="gtDataSource" cache-enabled="false">
+		<column name="id" db-name="ID" type="long" primary="true" />
+
+		<column name="requestCode" db-name="RequestCode" type="String" />
+		<column name="requestState" db-name="RequestState" type="int" />
+		<column name="documentName" db-name="DocumentName" type="int" />
+		<column name="documentYear" db-name="DocumentYear" type="int" />
+		<column name="ministryCode" db-name="MinistryCode" type="String" />
+		<column name="organization" db-name="Organization" type="String" />
+		<column name="division" db-name="Division" type="String" />
+		<column name="officerName" db-name="OfficerName" type="String" />
+		<column name="latestDate" db-name="LatestDate" type="Date" />
+		<column name="businessTypeCode" db-name="BusinessTypeCode" type="int" />
+		<column name="response" db-name="Response" type="String" />
+		<column name="remarks" db-name="Remarks" type="String" />
+
+
+		<order by="desc">
+			<order-column name="id" />
+		</order>
+		<finder name="RequestCode" return-type="ResultMinistry">
+			<finder-column name="requestCode" />
+		</finder>
+		<finder name="DocumentNameAnddocumentYear" return-type="Collection">
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+		</finder>
+		
+		<finder name="DocNameAndDocYearAndMinistryCode" return-type="Collection">
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+			<finder-column name="ministryCode" />
+		</finder>
+		
+		<finder name="MinistryCode" return-type="Collection">
+			<finder-column name="ministryCode" />
+		</finder>
+		<finder name="DocumentNameAnddocumentYearMinistryCodeBusinessTypeCode" return-type="ResultMinistry">
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+			<finder-column name="ministryCode" />
+			<finder-column name="businessTypeCode" />
+		</finder>
+
+	</entity>
+
+
+	<entity name="ResultHistoryMinistry" table="RESULT_HISTORY_MINISTRY" local-service="true" remote-service="true" data-source="gtDataSource" cache-enabled="false">
+		<column name="id" db-name="ID" type="long" primary="true" />
+
+		<column name="requestCode" db-name="RequestCode" type="String" />
+		<column name="requestState" db-name="RequestState" type="int" />
+		<column name="documentName" db-name="DocumentName" type="long" />
+		<column name="documentYear" db-name="DocumentYear" type="int" />
+		<column name="ministryCode" db-name="MinistryCode" type="String" />
+		<column name="organization" db-name="Organization" type="String" />
+		<column name="division" db-name="Division" type="String" />
+		<column name="officerName" db-name="OfficerName" type="String" />
+		<column name="latestDate" db-name="LatestDate" type="Date" />
+		<column name="businessTypeCode" db-name="BusinessTypeCode" type="int" />
+		<column name="response" db-name="Response" type="String" />
+		<column name="remarks" db-name="Remarks" type="String" />
+
+
+		<order by="desc">
+			<order-column name="id" />
+		</order>
+		<finder name="RequestCode" return-type="ResultMinistry">
+			<finder-column name="requestCode" />
+		</finder>
+		<finder name="DocumentNameAnddocumentYear" return-type="Collection">
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+		</finder>
+		<finder name="DocumentNameAnddocumentYearAndMinistryCode" return-type="Collection">
+			<finder-column name="documentName" />
+			<finder-column name="documentYear" />
+			<finder-column name="ministryCode" />
+		</finder>
+		<finder name="MinistryCode" return-type="Collection">
+			<finder-column name="ministryCode" />
+		</finder>
+
+	</entity>
+
+</service-builder>

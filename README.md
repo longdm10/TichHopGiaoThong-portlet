@@ -1,2 +1,0 @@
-# TichHopGiaoThong-portlet
-CVHH

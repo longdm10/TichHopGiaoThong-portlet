@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- XML Schema Generated from XML Document on Mon Sep 15 2014 14:48:55 GMT+0700 (SE Asia Standard Time) -->
+	<!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+	<xs:element name="InlandShiftingOrder">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DocumentName" type="xs:string"></xs:element>
+				<xs:element name="DocumentYear" type="xs:string"></xs:element>
+				<xs:element name="PortofAuthority" type="xs:string"></xs:element>
+				<xs:element name="NameOfShip" type="xs:string"></xs:element>
+				<xs:element name="AnchoringPortCode" type="xs:string"></xs:element>
+				<xs:element name="PortHarbourCode" type="xs:string"></xs:element>
+				<xs:element name="AnchoringPortWharfCode" type="xs:string"></xs:element>
+				<xs:element name="ShiftingDate" type="xs:string"></xs:element>
+				<xs:element name="IssueDate" type="xs:string"></xs:element>
+				<xs:element name="DirectorOfMaritimeAdministration" type="xs:string"></xs:element>
+				<xs:element name="CertificateNo" type="xs:string"></xs:element>
+				<xs:element name="Representative" type="xs:string"></xs:element>
+				<xs:element name="CallSign" type="xs:string"></xs:element> 
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

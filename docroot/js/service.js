@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.gt", "vn.dao.gt.asw.service", "TichHopGiaoThong-portlet");
