@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 
-<portlet-app version="2.0"
+<portlet-app
+	version="2.0"
 	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+>
 	<portlet>
 		<portlet-name>TichHopGiaoThong</portlet-name>
 		<display-name>TichHopGiaoThong</display-name>
@@ -38,7 +40,9 @@
 	<portlet>
 		<portlet-name>kehoachaction</portlet-name>
 		<display-name>GT-KeHoachAction</display-name>
-		<portlet-class>vn.gt.portlet.kehoach.KeHoachAction</portlet-class>
+		<portlet-class>
+			vn.gt.portlet.kehoach.KeHoachAction
+		</portlet-class>
 		<init-param>
 			<name>view-template</name>
 			<value>/html/kehoach/view.jsp</value>
@@ -52,38 +56,6 @@
 		<portlet-info>
 			<title>GT-KeHoachAction</title>
 			<short-title>KeHoachAction</short-title>
-			<keywords></keywords>
-		</portlet-info>
-		<security-role-ref>
-			<role-name>administrator</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>guest</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>power-user</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>user</role-name>
-		</security-role-ref>
-	</portlet>
-	<portlet>
-		<portlet-name>kehoach1action</portlet-name>
-		<display-name>GT-KeHoach1Action</display-name>
-		<portlet-class>vn.gt.portlet.kehoach1.KeHoach1Action</portlet-class>
-		<init-param>
-			<name>view-template</name>
-			<value>/html/kehoach1/view.jsp</value>
-		</init-param>
-		<expiration-cache>0</expiration-cache>
-		<supports>
-			<mime-type>text/html</mime-type>
-			<portlet-mode>view</portlet-mode>
-		</supports>
-		<resource-bundle>content/Language_kehoach1</resource-bundle>
-		<portlet-info>
-			<title>GT-KeHoach1Action</title>
-			<short-title>KeHoach1Action</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>
@@ -198,7 +170,9 @@
 	<portlet>
 		<portlet-name>thongtintauaction</portlet-name>
 		<display-name>ThongTinTauAction</display-name>
-		<portlet-class>vn.gt.portlet.thongtintau.ThongTinTauAction</portlet-class>
+		<portlet-class>
+			vn.gt.portlet.thongtintau.ThongTinTauAction
+		</portlet-class>
 		<init-param>
 			<name>view-template</name>
 			<value>/html/thongtintau/view.jsp</value>
@@ -230,7 +204,9 @@
 	<portlet>
 		<portlet-name>danhmucaction</portlet-name>
 		<display-name>DanhMucAction</display-name>
-		<portlet-class>vn.gt.portlet.danhmuc.DanhMucAction</portlet-class>
+		<portlet-class>
+			vn.gt.portlet.danhmuc.DanhMucAction
+		</portlet-class>
 		<init-param>
 			<name>view-template</name>
 			<value>/html/danhmuc/view.jsp</value>
@@ -293,7 +269,9 @@
 	<portlet>
 		<portlet-name>baocaotichhopaction</portlet-name>
 		<display-name>BaoCaoTichHopAction</display-name>
-		<portlet-class>vn.gt.portlet.baocaotichhop.BaoCaoTichHopAction</portlet-class>
+		<portlet-class>
+			vn.gt.portlet.baocaotichhop.BaoCaoTichHopAction
+		</portlet-class>
 		<init-param>
 			<name>view-template</name>
 			<value>/html/baocaotichhop/view.jsp</value>
@@ -303,7 +281,9 @@
 			<mime-type>text/html</mime-type>
 			<portlet-mode>view</portlet-mode>
 		</supports>
-		<resource-bundle>content/Language_Baocaotichhop</resource-bundle>
+		<resource-bundle>
+			content/Language_Baocaotichhop
+		</resource-bundle>
 		<portlet-info>
 			<title>BaoCaoTichHopAction</title>
 			<short-title>BaoCaoTichHopAction</short-title>

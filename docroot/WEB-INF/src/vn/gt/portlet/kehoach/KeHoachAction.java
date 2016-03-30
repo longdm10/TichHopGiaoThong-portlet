@@ -1,4 +1,4 @@
-package vn.gt.portlet.kehoach1;
+package vn.gt.portlet.kehoach;
 
 import java.io.File;
 import javax.portlet.PortletException;
@@ -63,11 +63,11 @@ import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
 
 /**
- * Portlet implementation class KeHoach1Action
+ * Portlet implementation class KeHoachAction
  */
-public class KeHoach1Action extends TransportationMVCAction {
+public class KeHoachAction extends TransportationMVCAction {
 	
-	private Log _log = LogFactoryUtil.getLog(KeHoach1Action.class);
+	private Log _log = LogFactoryUtil.getLog(KeHoachAction.class);
 	
 	public void timKiemKeHoach(ActionRequest resourceRequest, ActionResponse httpReq) {
 		//hieuroi :D
@@ -704,10 +704,6 @@ public class KeHoach1Action extends TransportationMVCAction {
 			return "/group/ke-hoach/danh-sach-tau-thuyen-roi-cang";
 		} else if (flagMenu.equalsIgnoreCase(MessageType.LOAT_THU_TUC_DANG_DI_CHUYEN)) {
 			return "/group/ke-hoach/lich-su-tau-thuyen-di-chuyen";
-		} else if (flagMenu.equalsIgnoreCase(MessageType.LOAT_THU_TUC_VAO_CANG_BIEN)) {
-			return "/group/ke-hoach/danh-sach-tau-thuyen-vao-cang_bien";
-		} else if (flagMenu.equalsIgnoreCase(MessageType.LOAT_THU_TUC_ROI_CANG_BIEN)) {
-			return "/group/ke-hoach/danh-sach-tau-thuyen-roi-cang_bien";
 		}
 		return "";
 	}

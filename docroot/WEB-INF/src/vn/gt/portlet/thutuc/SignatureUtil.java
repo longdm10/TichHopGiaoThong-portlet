@@ -29,7 +29,7 @@ import vn.gt.dao.danhmuc.model.DmMaritime;
 import vn.gt.dao.danhmuc.service.DmHistoryMaritimeLocalServiceUtil;
 import vn.gt.dao.danhmuc.service.DmMaritimeLocalServiceUtil;
 import vn.gt.dao.noticeandmessage.model.TempDocument;
-import vn.gt.portlet.kehoach1.ExtractTextLocations;
+import vn.gt.portlet.kehoach.ExtractTextLocations;
 
 import vn.gt.tichhop.message.MessageType;
 import vn.gt.tichhop.report.ReportConstant;

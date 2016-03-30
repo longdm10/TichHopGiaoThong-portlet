@@ -33,7 +33,6 @@ String requestUrl = themeDisplay.getURLCurrent().replaceAll("%2F", "/");
         		  List<Layout> childrens = obj1.getAllChildren();
                   if(childrens != null &&childrens.size() > 0) {
                       for (Layout child : childrens) {
-                    	  //child.setHidden(arg0)
                     	  url = MenuConstraint.getURL(child);
                     	  if (requestUrl.contains(url)) {
                     		  menuId = url;
@@ -50,13 +49,7 @@ String requestUrl = themeDisplay.getURLCurrent().replaceAll("%2F", "/");
                                   portletSession.setAttribute(MessageType.LOAT_THU_TUC, MessageType.LOAT_THU_TUC_ROI_CANG ,PortletSession.APPLICATION_SCOPE);
                               } else if (url.contains("lich-su-tau-thuyen-di-chuyen")) {
                                   portletSession.setAttribute(MessageType.LOAT_THU_TUC, MessageType.LOAT_THU_TUC_DANG_DI_CHUYEN ,PortletSession.APPLICATION_SCOPE);
-                              //LONGDM NEW 20160325 
-                              }else if (url.contains("danh-sach-tau-thuyen-roi-cang-bien")) {
-                                  portletSession.setAttribute(MessageType.LOAT_THU_TUC, MessageType.LOAT_THU_TUC_ROI_CANG_BIEN ,PortletSession.APPLICATION_SCOPE);
-                              } else if (url.contains("danh-sach-tau-thuyen-vao-cang-bien")) {
-                                  portletSession.setAttribute(MessageType.LOAT_THU_TUC, MessageType.LOAT_THU_TUC_VAO_CANG_BIEN ,PortletSession.APPLICATION_SCOPE);
                               }
-                              //LONGDM
                               break;
                     	  }
                       }
@@ -114,15 +107,7 @@ String requestUrl = themeDisplay.getURLCurrent().replaceAll("%2F", "/");
                           }  else if (menuId.contains("lich-su-tau-thuyen-di-chuyen")) {
                               portletSession.setAttribute(MessageType.LOAT_THU_TUC, MessageType.LOAT_THU_TUC_DANG_DI_CHUYEN ,PortletSession.APPLICATION_SCOPE);
                               portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
-                          //LONGDM NEW 20160325
-                          }else if (menuId.contains("danh-sach-tau-thuyen-roi-cang-bien")) {
-                              portletSession.setAttribute(MessageType.LOAT_THU_TUC, MessageType.LOAT_THU_TUC_ROI_CANG_BIEN ,PortletSession.APPLICATION_SCOPE);
-                              portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
-                          }  else if (menuId.contains("danh-sach-tau-thuyen-vao-cang-bien")) {
-                              portletSession.setAttribute(MessageType.LOAT_THU_TUC, MessageType.LOAT_THU_TUC_VAO_CANG_BIEN ,PortletSession.APPLICATION_SCOPE);
-                              portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
                           }
-                          //LONGDM
                       }
                       if (MenuConstraint.getSelected(menuId, url, "active").length() > 0) {
                     	  portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
@@ -154,14 +139,6 @@ String requestUrl = themeDisplay.getURLCurrent().replaceAll("%2F", "/");
                       } else if (url.contains("lich-su-tau-thuyen-di-chuyen")) {
                     	  %>
                           <li class="lichsu">
-                          <%
-                      } else if (url.contains("danh-sach-tau-thuyen-roi-cang_bien")) {
-                          %>
-                          <li class="roicangbien">
-                          <%
-                      } else if (url.contains("danh-sach-tau-thuyen-vao-cang_bien")) {
-                          %>
-                          <li class="vaocangbien">
                           <%
                       }
                       %>

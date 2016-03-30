@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Calendar;
 
-import vn.gt.portlet.kehoach1.IDocumentStorage;
+import vn.gt.portlet.kehoach.IDocumentStorage;
 import vn.gt.utils.config.ConfigurationManager;
 import vn.gt.utils.document.ResultUpload;
 

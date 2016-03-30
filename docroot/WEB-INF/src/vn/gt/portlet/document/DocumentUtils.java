@@ -8,7 +8,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import vn.gt.portlet.kehoach1.IDocumentStorage;
+import vn.gt.portlet.kehoach.IDocumentStorage;
 import vn.gt.utils.config.ConfigurationManager;
 import vn.gt.utils.document.ResultUpload;
 

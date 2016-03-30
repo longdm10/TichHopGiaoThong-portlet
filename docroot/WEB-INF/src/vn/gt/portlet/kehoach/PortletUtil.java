@@ -1,4 +1,4 @@
-package vn.gt.portlet.kehoach1;
+package vn.gt.portlet.kehoach;
 
 import javax.portlet.ActionResponse;
 import javax.servlet.http.HttpServletResponse;

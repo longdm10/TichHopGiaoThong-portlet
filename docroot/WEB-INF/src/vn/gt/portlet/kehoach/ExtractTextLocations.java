@@ -1,4 +1,4 @@
-package vn.gt.portlet.kehoach1;
+package vn.gt.portlet.kehoach;
 
 import java.io.File;
 import java.io.IOException;

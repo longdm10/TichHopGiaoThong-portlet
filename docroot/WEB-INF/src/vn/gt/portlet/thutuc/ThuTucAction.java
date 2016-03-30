@@ -10,8 +10,8 @@ import javax.portlet.ResourceResponse;
 import org.apache.commons.io.FileUtils;
 
 import vgca.svrsigner.ServerSigner;
-import vn.gt.portlet.kehoach1.ConvertUtil;
-import vn.gt.portlet.kehoach1.PortletUtil;
+import vn.gt.portlet.kehoach.ConvertUtil;
+import vn.gt.portlet.kehoach.PortletUtil;
 import vn.gt.portlet.thutuc.SignatureUtil;
 import vn.gt.tichhop.report.ReportUtils;
 import vn.gt.utils.document.DocumentStorageImpl;

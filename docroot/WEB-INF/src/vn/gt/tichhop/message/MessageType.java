@@ -111,8 +111,6 @@ public class MessageType {
 	public static final String LOAT_THU_TUC_TEN = "LOAT_THU_TUC_TEN";
 	public static final String LOAT_THU_TUC_VAO_CANG = "4";
 	public static final String LOAT_THU_TUC_ROI_CANG = "5";
-	public static final String LOAT_THU_TUC_VAO_CANG_BIEN = "6";
-	public static final String LOAT_THU_TUC_ROI_CANG_BIEN = "7";
 	
 	public static final String FUNCTION_KHAI_BAO = "01";
 	public static final String FUNCTION_KHAI_SUA = "02";
