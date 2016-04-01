@@ -44,15 +44,18 @@ String requestUrl = themeDisplay.getURLCurrent().replaceAll("%2F", "/");
                     	  if (requestUrl.contains(url)) {
                     		  menuId = url;
                               portletSession.setAttribute(MenuConstraint.SESSION_MENU_SELECTED, menuId ,PortletSession.APPLICATION_SCOPE);
-                              if (url.contains("giay-phep-roi-cang")) {
-                                  portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.GIAY_PHEP_ROI_CANG) ,PortletSession.APPLICATION_SCOPE);
-                              } else if (url.contains("giay-phep-qua-canh")) {
-                                  portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.GIAY_PHEP_QUA_CANH) ,PortletSession.APPLICATION_SCOPE);
-                              } else if (url.contains("thong-tin-tau")) {
+//                               if (url.contains("giay-phep-roi-cang")) {
+//                                   portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.GIAY_PHEP_ROI_CANG) ,PortletSession.APPLICATION_SCOPE);
+//                               } else if (url.contains("giay-phep-qua-canh")) {
+//                                   portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.GIAY_PHEP_QUA_CANH) ,PortletSession.APPLICATION_SCOPE);
+//                               } else if (url.contains("thong-tin-tau")) {
+//                                   portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.THONG_TIN_TAU) ,PortletSession.APPLICATION_SCOPE);
+//                               } else if (url.contains("ke-hoach-dieu-dong-tau")) {
+//                                   portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.KE_HOACH_DIEU_DONG_TAU) ,PortletSession.APPLICATION_SCOPE);
+//                               }
+                              if (url.contains("thong-tin-tau")) {
                                   portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.THONG_TIN_TAU) ,PortletSession.APPLICATION_SCOPE);
-                              } else if (url.contains("ke-hoach-dieu-dong-tau")) {
-                                  portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.KE_HOACH_DIEU_DONG_TAU) ,PortletSession.APPLICATION_SCOPE);
-                              }
+                              } 
                               break;
                     	  }
                       }
@@ -93,19 +96,23 @@ String requestUrl = themeDisplay.getURLCurrent().replaceAll("%2F", "/");
                       if (menuId == null || menuId.length() == 0 ) {
                           menuId = url;
                           portletSession.setAttribute(MenuConstraint.SESSION_MENU_SELECTED, menuId ,PortletSession.APPLICATION_SCOPE);
-                          if (url.contains("giay-phep-roi-cang")) {
-                              portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.GIAY_PHEP_ROI_CANG) ,PortletSession.APPLICATION_SCOPE);
-                              portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
-                          } else if (url.contains("giay-phep-qua-canh")) {
-                              portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.GIAY_PHEP_QUA_CANH) ,PortletSession.APPLICATION_SCOPE);
-                              portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
-                          } else if (url.contains("thong-tin-tau")) {
+//                           if (url.contains("giay-phep-roi-cang")) {
+//                               portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.GIAY_PHEP_ROI_CANG) ,PortletSession.APPLICATION_SCOPE);
+//                               portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
+//                           } else if (url.contains("giay-phep-qua-canh")) {
+//                               portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.GIAY_PHEP_QUA_CANH) ,PortletSession.APPLICATION_SCOPE);
+//                               portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
+//                           } else if (url.contains("thong-tin-tau")) {
+//                               portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.THONG_TIN_TAU) ,PortletSession.APPLICATION_SCOPE);
+//                               portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
+//                           } else if (url.contains("ke-hoach-dieu-dong-tau")) {
+//                               portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.KE_HOACH_DIEU_DONG_TAU) ,PortletSession.APPLICATION_SCOPE);
+//                               portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
+//                           }
+                          if (url.contains("thong-tin-tau")) {
                               portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.THONG_TIN_TAU) ,PortletSession.APPLICATION_SCOPE);
                               portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
-                          } else if (url.contains("ke-hoach-dieu-dong-tau")) {
-                              portletSession.setAttribute(MessageType.LOAT_THU_TUC, String.valueOf(ThongTinTauAction.KE_HOACH_DIEU_DONG_TAU) ,PortletSession.APPLICATION_SCOPE);
-                              portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
-                          }
+                          } 
                       }
                       if (MenuConstraint.getSelected(menuId, url, "active").length() > 0) {
                     	  portletSession.setAttribute(MessageType.LOAT_THU_TUC_TEN, child.getNameCurrentValue() ,PortletSession.APPLICATION_SCOPE);
@@ -116,33 +123,19 @@ String requestUrl = themeDisplay.getURLCurrent().replaceAll("%2F", "/");
                       <portlet:actionURL var="sendDataToRegistrationPortletURL"   name="menu"  >
                       </portlet:actionURL>
                       <%
-                      if (url.contains("giay-phep-roi-cang")) {
-                          %>
-                          <li class="roicang">
-                          <%
-                      } else if (url.contains("giay-phep-qua-canh")) {
-                          %>
-                          <li class="KH_dieudong">
-                          <%
-                      } else if (url.contains("thong-tin-tau")) {
+                      if (url.contains("thong-tin-tau")) {
                           %>
                           <li class="tt_tau">
-                          <%
-                      } else if (url.contains("ke-hoach-dieu-dong-tau")) {
-                          %>
-                          <li class="kehoach_dieudong">
-                          <%
-                      }
-                      %>
-                       <aui:form action="<%=sendDataToRegistrationPortletURL%>" method="POST" name="myForm" id="myForm">
+                                                 <aui:form action="<%=sendDataToRegistrationPortletURL%>" method="POST" name="myForm" id="myForm">
                            <input type="hidden" name="<%=MenuConstraint.SESSION_MENU_SELECTED%>" id="<%=MenuConstraint.SESSION_MENU_SELECTED%>" value=""/>
                           <a <%=MenuConstraint.getSelected(menuId, url, "active") %>   onclick="getData('<%=url%>','<%=sendDataToRegistrationPortletURL%>')"  >
                                <%=child.getNameCurrentValue() %>
                           </a>
                         </aui:form>  
                       </li>
-                      <%
-                      
+                          <%
+                      } 
+
         		  }
         	  }
           }
